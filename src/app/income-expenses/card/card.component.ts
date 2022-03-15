@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-
-export type CardType = 'income' | 'expense';
+import { BudgetType } from 'src/app/model/budget';
 
 @Component({
   selector: 'app-card',
@@ -10,7 +9,8 @@ export type CardType = 'income' | 'expense';
 export class CardComponent {
   @Input() description: string = '';
   @Input() amt: number = 0;
-  @Input() type!: CardType;
+  @Input() type!: BudgetType;
+  hover = false;
 
   isExpense() {
     return this.type === 'expense';

@@ -1,13 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
+import { Budget } from '../model/budget';
 
 @Component({
   selector: 'app-total-budget',
   templateUrl: './total-budget.component.html',
   styleUrls: ['./total-budget.component.scss'],
 })
-export class TotalBudgetComponent implements OnInit {
-  total: number = 0;
-  constructor() {}
+export class TotalBudgetComponent implements OnChanges {
+  @Input() budgets!: Budget[];
 
-  ngOnInit(): void {}
+  total: number = 0;
+
+  ngOnChanges() {
+    this.total = this.budgets.reduce((prev, curr) => prev + curr.amount, 0);
+  }
 }
