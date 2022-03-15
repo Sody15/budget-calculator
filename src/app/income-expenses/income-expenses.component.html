@@ -1,0 +1,15 @@
+<div class="income-expenses-container">
+  <div class="col income">
+    <h2 class="header">Income</h2>
+    <app-card [description]="'Test 1'" [amt]="10" [type]="'income'"></app-card>
+  </div>
+  <div class="col expenses">
+    <h2 class="header">Expenses</h2>
+    <app-card [description]="'Test 2'" [amt]="10" [type]="'expense'"></app-card>
+    <app-card
+      [description]="'Test 3'"
+      [amt]="9000"
+      [type]="'expense'"
+    ></app-card>
+  </div>
+</div>

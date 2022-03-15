@@ -1,0 +1,29 @@
+$income-color: rgb(98, 187, 98);
+$expense-color: rgb(255, 97, 57);
+
+.card {
+  font-size: 1.6rem;
+  background-color: rgb(247, 247, 247);
+  border-radius: 3px;
+  padding: 1rem;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &.income {
+    color: $income-color;
+    .amt {
+      background-color: rgba(98, 187, 98, 0.39);
+    }
+  }
+  &.expense {
+    color: $expense-color;
+    .amt {
+      background-color: rgba(255, 97, 57, 0.288);
+    }
+  }
+  .amt {
+    padding: 0.5rem;
+    border-radius: 3px;
+  }
+}

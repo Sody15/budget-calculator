@@ -1,0 +1,24 @@
+@import "../../styles/variables";
+
+.income-expenses-container {
+  padding: 4rem 0;
+  .col {
+    display: inline-flex;
+    flex-direction: column;
+    width: 48%;
+    &:not(:last-of-type) {
+      margin-right: 4%;
+    }
+    .header {
+      text-transform: uppercase;
+      font-size: 2rem;
+      font-weight: 800;
+    }
+    &.income {
+      color: $income-color;
+    }
+    &.expenses {
+      color: $expense-color;
+    }
+  }
+}

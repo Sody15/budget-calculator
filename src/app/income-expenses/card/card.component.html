@@ -1,0 +1,4 @@
+<div class="card" [ngClass]="isExpense() ? 'expense' : 'income'">
+  <span class="desc"> {{ description }}</span>
+  <span class="amt"><span *ngIf="isExpense()">-</span>{{ amt }}</span>
+</div>
