@@ -6,6 +6,8 @@
       [description]="income.description"
       [amt]="income.amount"
       [type]="'income'"
+      (edit)="editBudget($event)"
+      (delete)="delete($event)"
     ></app-card>
   </div>
   <div class="col expenses">
@@ -15,6 +17,8 @@
       [description]="expense.description"
       [amt]="expense.amount"
       [type]="'expense'"
+      (edit)="editBudget($event)"
+      (delete)="delete($event)"
     ></app-card>
   </div>
 </div>

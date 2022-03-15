@@ -1,6 +1,7 @@
 @import "../../styles/variables";
 
 .income-expenses-container {
+  border-top: 2px solid rgb(201, 201, 201);
   padding: 4rem 0;
   .col {
     display: inline-flex;

@@ -1,4 +1,4 @@
-<form [formGroup]="form" (ngSubmit)="save()" class="budget-form">
+<form [formGroup]="form" (ngSubmit)="submit()" class="budget-form">
   <input
     type="number"
     name="amount"
@@ -13,5 +13,18 @@
     placeholder="Description"
     formControlName="description"
   />
-  <button class="btn btn--purple" [disabled]="isValid()">Add</button>
+  <button
+    *ngIf="formType === 'add'"
+    class="btn btn--purple"
+    [disabled]="isValid()"
+  >
+    Add
+  </button>
+  <button
+    *ngIf="formType === 'edit'"
+    class="btn btn--green"
+    [disabled]="isValid()"
+  >
+    Save
+  </button>
 </form>

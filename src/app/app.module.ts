@@ -8,6 +8,7 @@ import { IncomeExpensesComponent } from './income-expenses/income-expenses.compo
 import { CardComponent } from './income-expenses/card/card.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BudgetColorDirective } from './total-budget/budget-color.directive';
+import { BudgetModalComponent } from './income-expenses/budget-modal/budget-modal.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { BudgetColorDirective } from './total-budget/budget-color.directive';
     IncomeExpensesComponent,
     CardComponent,
     BudgetColorDirective,
+    BudgetModalComponent,
   ],
   imports: [BrowserModule, ReactiveFormsModule],
   providers: [],

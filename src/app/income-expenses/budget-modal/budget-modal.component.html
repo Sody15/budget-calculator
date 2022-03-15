@@ -1,0 +1,10 @@
+<div class="modal">
+  <h2>Edit</h2>
+  <app-budget-form
+    formType="edit"
+    [budget]="budget"
+    [selectedIndex]="selectedIndex"
+    (save)="closeModal()"
+  ></app-budget-form>
+</div>
+<div class="modal-bg" (click)="closeModal()"></div>

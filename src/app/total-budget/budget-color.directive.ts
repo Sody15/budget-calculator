@@ -14,7 +14,7 @@ export class BudgetColorDirective {
   constructor(private el: ElementRef) {}
 
   ngOnChanges() {
-    if (this.total > 0) {
+    if (this.total >= 0) {
       this.el.nativeElement.style.color = COLOR.INCOME;
     } else {
       this.el.nativeElement.style.color = COLOR.EXPENSE;

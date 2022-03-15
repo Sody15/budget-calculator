@@ -12,6 +12,6 @@ export class AppComponent {
   budgets$!: Observable<Budget[]>;
 
   constructor(private budgetService: BudgetService) {
-    this.budgets$ = this.budgetService.budgets$.pipe(tap(console.log));
+    this.budgets$ = this.budgetService.budgets$;
   }
 }

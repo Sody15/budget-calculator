@@ -11,7 +11,7 @@
     <div class="main-container" *ngIf="budgets$ | async as budgets">
       <app-total-budget [budgets]="budgets"></app-total-budget>
       <div class="budget-container">
-        <app-budget-form></app-budget-form>
+        <app-budget-form formType="add"></app-budget-form>
         <app-income-expenses [budgets]="budgets"></app-income-expenses>
       </div>
     </div>

@@ -3,8 +3,9 @@
   [ngClass]="isExpense() ? 'expense' : 'income'"
   (mouseenter)="hover = true"
   (mouseleave)="hover = false"
+  (click)="editBudget()"
 >
-  <span class="delete-btn" *ngIf="hover"></span>
+  <span class="delete-btn" *ngIf="hover" (click)="deleteCard($event)"></span>
   <span class="desc"> {{ description }}</span>
   <span class="amt">{{ amt }}</span>
 </div>
