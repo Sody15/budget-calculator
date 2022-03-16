@@ -1,7 +1,8 @@
-import { Budget } from './model/budget';
-import { BudgetService } from './budget.service';
 import { Component } from '@angular/core';
 import { Observable, tap } from 'rxjs';
+
+import { Budget } from '@shared/budget';
+import { BudgetService } from './budget.service';
 
 @Component({
   selector: 'app-root',

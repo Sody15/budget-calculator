@@ -1,6 +1,7 @@
-import { Budget } from './../model/budget';
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+import { Budget } from '@shared/budget';
 import { BudgetService } from '../budget.service';
 
 @Component({

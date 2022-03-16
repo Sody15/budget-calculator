@@ -1,6 +1,7 @@
-import { Budget } from './../model/budget';
 import { Component, Input, OnChanges, ViewContainerRef } from '@angular/core';
-import { BudgetModalComponent } from './budget-modal/budget-modal.component';
+import { EditModalComponent } from './edit-modal/edit-modal.component';
+
+import { Budget } from '@shared/budget';
 import { BudgetService } from '../budget.service';
 
 @Component({
@@ -28,8 +29,8 @@ export class IncomeExpensesComponent implements OnChanges {
     const selectedIndex = this.budgetService.getBudgetIndex(budget);
 
     const componentRef =
-      this.viewContainerRef.createComponent<BudgetModalComponent>(
-        BudgetModalComponent
+      this.viewContainerRef.createComponent<EditModalComponent>(
+        EditModalComponent
       );
     componentRef.instance.budget = budget;
     componentRef.instance.selectedIndex = selectedIndex;

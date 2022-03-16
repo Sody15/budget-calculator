@@ -1,5 +1,6 @@
 import { Component, Input, OnChanges } from '@angular/core';
-import { Budget } from '../model/budget';
+
+import { Budget } from '@shared/budget';
 
 @Component({
   selector: 'app-total-budget',

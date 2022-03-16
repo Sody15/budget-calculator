@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Budget, BudgetType } from 'src/app/model/budget';
+
+import { Budget, BudgetType } from '@shared/budget';
 
 @Component({
   selector: 'app-card',

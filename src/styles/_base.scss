@@ -1,3 +1,5 @@
+@import "./mixins";
+
 // Base Font
 @import url("https://fonts.googleapis.com/css?family=Nunito:200,400,700,800");
 
@@ -5,6 +7,11 @@
 html {
   // This defines what 1rem is
   font-size: 62.5%; // 1rem = 10px; 10px/16px = 62.5%
+
+  @include respond(tab-port) {
+    // width < 900
+    font-size: 70%; //1rem = 8px, 8/16 = 50%
+  }
 }
 
 body {

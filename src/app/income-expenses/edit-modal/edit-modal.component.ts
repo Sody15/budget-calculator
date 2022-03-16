@@ -1,13 +1,12 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 
-import { Budget } from './../../model/budget';
+import { Budget } from '@shared/budget';
 
 @Component({
-  selector: 'app-budget-modal',
-  templateUrl: './budget-modal.component.html',
-  styleUrls: ['./budget-modal.component.scss'],
+  templateUrl: './edit-modal.component.html',
+  styleUrls: ['./edit-modal.component.scss'],
 })
-export class BudgetModalComponent {
+export class EditModalComponent {
   budget!: Budget;
   selectedIndex!: number;
 

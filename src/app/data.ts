@@ -1,4 +1,4 @@
-import { Budget } from './model/budget';
+import { Budget } from './shared/budget';
 
 export const budgetData: Budget[] = [
   {

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
-import { Budget } from './model/budget';
+import { Budget } from '@shared/budget';
 
 import { budgetData } from './data';
 
@@ -10,13 +10,14 @@ import { budgetData } from './data';
 })
 export class BudgetService {
   budgets = new BehaviorSubject<Budget[]>(budgetData);
-
   // budgets = new BehaviorSubject<Budget[]>([]);
+
   budgets$ = this.budgets.asObservable();
 
   private get budgetsArray() {
     return this.budgets.getValue();
   }
+
   private set budgetsArray(budgets: Budget[]) {
     this.budgets.next([...budgets]);
   }
