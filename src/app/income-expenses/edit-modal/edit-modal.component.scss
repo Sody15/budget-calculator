@@ -11,14 +11,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 900;
   position: absolute;
   pointer-events: none;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
+  pointer-events: none;
   .modal {
+    pointer-events: auto;
+    z-index: 1000;
     animation: dialogOpenAnimation 0.15s ease-out;
     max-width: 800px;
     width: 50%;
@@ -34,8 +36,9 @@
 }
 
 .modal-bg {
-  z-index: 9;
-  position: fixed;
+  pointer-events: auto;
+  z-index: 1000;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
